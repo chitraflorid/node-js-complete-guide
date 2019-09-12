@@ -1,0 +1,3 @@
+[submodule "nodeJSWiki"]
+	path = nodeJSWiki
+	url = https://RHieger@github.com/RHieger/node-js-complete-guide.wiki.git
