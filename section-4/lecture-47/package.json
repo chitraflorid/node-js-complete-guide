@@ -1,0 +1,19 @@
+{
+  "name": "lecture-47",
+  "version": "1.0.0",
+  "description": "Complete Node.js Guide--Lecture 47",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "keywords": [
+    "ES6",
+    "Node.js"
+  ],
+  "author": "Robert Hieger",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
