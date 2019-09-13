@@ -1,0 +1,22 @@
+{
+  "name": "assignment-2",
+  "version": "1.0.0",
+  "description": "A simple app that demonstrates basic routing using the Express.js third party framework",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "keywords": [
+    "Node.js",
+    "Express.js",
+    "Middleware",
+    "ES6",
+    "HTTP"
+  ],
+  "author": "Robert Hieger",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
