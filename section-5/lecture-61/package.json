@@ -1,0 +1,20 @@
+{
+  "name": "lecture-61",
+  "version": "1.0.3",
+  "description": "Beginning use of Express.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "keywords": [
+    "Node.js",
+    "Express.js",
+    "HTML"
+  ],
+  "author": "Robert Hieger",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
