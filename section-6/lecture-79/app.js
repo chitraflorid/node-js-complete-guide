@@ -41,6 +41,19 @@ const shopRoutes = require('./routes/shop');
 
 const app = express();
 
+// Set view engine for the application:
+
+app.set('view engine', 'pug');
+
+// Set path to templates:
+
+app.set('views', 'views');
+
+// NOTE: '/views' is the default path for templates in Express.
+// This path is set here just to demonstrate how this is done.
+// The only time this would be used in production is if a different
+// path were chosen in which to store template files.
+
 // Set request body parsing:
 
 app.use( bodyParser.urlencoded( {extended: false} ) );
