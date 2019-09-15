@@ -4,7 +4,7 @@
  * shop.js                                                     *
  *                                                             *
  * Robert Hieger                                               *
- * September 12, 2019                                          *
+ * September 14, 2019                                          *
  *                                                             *
  * This module contains the routing logic for the Shop page    *
  * which is comprised of the items on sale in the theoretical  *
