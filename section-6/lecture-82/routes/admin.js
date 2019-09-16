@@ -4,7 +4,7 @@
  * admin.js                                                    *
  *                                                             *
  * Robert Hieger                                               *
- * September 14, 2019                                           *
+ * September 15, 2019                                           *
  *                                                             *
  * This module contains the routing logic for the Admin page   *
  * that allows addition of products to the online store in     *
@@ -40,17 +40,7 @@ router.get('/add-product', (req, res, next) => {
 
     // Send response:
 
-    // NOTE: The command below is a refactoring of the commented-out
-    // code that follows it.
-
-    res.sendFile( path.join(rootDir, 'views', 'add-product.html') );
-
-    // res.sendFile( path.join(__dirname, '..', 'views', 'add-product.html) );
-
-    // NOTE: The double dots above (..) denote the same thing as
-    // '../' in UNIX-based systems or '..\' on Windows. It is
-    // therefore preferrable, and even correct to have only the
-    // two dots so as to be more correct for either OS file system.
+    res.render('add-product', {pageTitle: 'Add Product'} );
 
 }); // end router.use()
 
