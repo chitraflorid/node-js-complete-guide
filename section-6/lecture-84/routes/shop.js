@@ -43,7 +43,7 @@ router.get('/', (req, res, next) => {
 
     // Send response:
 
-    res.render( 'shop', { prods: products, docTitle: 'Shop' } );
+    res.render( 'shop', { prods: products, pageTitle: 'Shop', path: '/' } );
 
     
 }); // end router.get()
