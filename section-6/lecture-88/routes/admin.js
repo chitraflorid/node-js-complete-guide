@@ -40,7 +40,14 @@ router.get('/add-product', (req, res, next) => {
 
     // Send response:
 
-    res.render('add-product', {pageTitle: 'Add Product', path: '/admin/add-product'} );
+    res.render('add-product',
+        {
+            pageTitle: 'Add Product',
+            path: '/admin/add-product',
+            formsCSS: true,
+            productCSS: true,
+            activeAddProduct: true
+        } );
 
 }); // end router.use()
 
