@@ -43,7 +43,8 @@ router.get('/', (req, res, next) => {
 
     // Send response:
 
-    res.render( 'shop', { prods: products, pageTitle: 'Shop', path: '/' } );
+    res.render( 'shop', { prods: products, pageTitle: 'Shop', path: '/',
+        hasProducts: products.length > 0 } );
 
     
 }); // end router.get()
