@@ -1,7 +1,7 @@
 /*
  ***************************************************************
  *                                                             *
- * Lecture 86: Working With Handlebars                         *
+ * Lecture 87: Converting Our Project to Handlebars            *
  *                                                             *
  * app.js                                                      *
  *                                                             *
@@ -9,12 +9,12 @@
  * September 20, 2019                                          *
  *                                                             *
  * Picking up where the last lecture left off, this lecture    *
- * begins the exploration of another very popular templating   *
- * engine--Express-Handlebars.                                 *
+ * begins the process of converting the project to one that    *
+ * uses the express-handlebars templating engine.              *
  *                                                             *
- * Unlike the Pug engine, Express-Handlebars is structured     *
- * very much like HTML, itself, and uses double curly braces   *
- * to indicate substitutions of dynamic data.                  *
+ * This engine, rather than using a sparse, symbolic syntax    *
+ * to represent HTML content, uses HTML content, itself with   *
+ * templating syntax that is replaced by dynamic content.      *
  *                                                             *
  ***************************************************************
 */
@@ -29,8 +29,6 @@ const express = require('express');
 
 const bodyParser = require('body-parser');
 
-const expressHbs = require('express-handlebars');   // express-handlebars engine
-
 // Import custom modules:
 
 const adminData = require('./routes/admin');
@@ -44,11 +42,7 @@ const app = express();
 
 // Set view engine for the application:
 
-// Register express-handlebars as a templating engine usable by Express:
-
-app.engine('hbs', expressHbs());
-
-app.set('view engine', 'hbs');
+app.set('view engine', 'pug');
 
 // Set path to templates:
 

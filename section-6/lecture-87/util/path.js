@@ -4,10 +4,10 @@
  * path.js                                                     *
  *                                                             *
  * Robert Hieger                                               *
- * September 20, 2019                                           *
+ * September 20, 2019                                          *
  *                                                             *
  * This module contains a helper function used to refine the   *
- * navigation for this application.
+ * navigation for this application.                            *
  *                                                             *
  ***************************************************************
 */

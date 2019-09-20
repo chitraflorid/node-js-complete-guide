@@ -1,7 +1,7 @@
 {
-  "name": "lecture-86",
+  "name": "lecture-87",
   "version": "1.2.2",
-  "description": "Exploring Express-Handlebars Templating Engine",
+  "description": "Working with express-handlebars Templating Engine",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
