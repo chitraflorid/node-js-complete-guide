@@ -29,6 +29,8 @@ const express = require('express');
 
 const bodyParser = require('body-parser');
 
+const expressHbs = require('express-handlebars');   // express-handlebars engine
+
 // Import custom modules:
 
 const adminData = require('./routes/admin');
@@ -42,7 +44,11 @@ const app = express();
 
 // Set view engine for the application:
 
-app.set('view engine', 'pug');
+// Register express-handlebars as a templating engine usable by Express:
+
+app.engine('hbs', expressHbs());
+
+app.set('view engine', 'hbs');
 
 // Set path to templates:
 
