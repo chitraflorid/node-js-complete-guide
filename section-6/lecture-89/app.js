@@ -25,8 +25,6 @@ const express = require('express');
 
 const bodyParser = require('body-parser');
 
-const expressHbs = require('express-handlebars');   // express-handlebars engine
-
 // Import custom modules:
 
 const adminData = require('./routes/admin');
@@ -40,13 +38,7 @@ const app = express();
 
 // Set view engine for the application:
 
-app.engine('hbs', expressHbs({
-    layoutsDir: './views/layouts/',
-    defaultLayout: 'main-layout',
-    extname: 'hbs'
- }));
-
-app.set('view engine', 'hbs');
+app.set('view engine', 'ejs');
 
 // Set path to templates:
 
