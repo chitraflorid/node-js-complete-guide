@@ -1,4 +1,4 @@
-<!-- 404 ERROR PAGE -->
+<%# 404 ERROR PAGE %>
 
     <%- include('includes/head.ejs') %>
 
@@ -6,27 +6,12 @@
 
     <body>
 
-        <header class="main-header">
-
-            <nav class="main-header__nav">
-
-                <ul class="main-header__item-list">
-
-                    <li class="main-header__item"><a  href="/">Shop</a></li>
-                    <li class="main-header__item"><a href="admin/add-product">Add Product</a></li>
-
-                </ul>   <!-- END ul -->
-
-            </nav>  <!-- END nav -->
-
-        </header>   <!-- END header -->
+        <%- include('./includes/navigation.ejs') %>
 
         <main>
 
             <h1>ERROR 404: Page Not Found!</h1>
 
         </main> <!-- END main -->
-    
-    </body>
 
-</html>
+    <%- include('./includes/end.ejs') %>
