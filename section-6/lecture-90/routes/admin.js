@@ -56,18 +56,6 @@ router.post('/add-product', (req, res, next) => {
     // Push new element onto products array:
 
     products.push( { title: req.body.title } );
-    
-    // console.log(req.body);
-
-
-    // NOTE: This statement only logs the content of the request body
-    // to the console, but does not render it to a page.
-    
-    // ALSO, the current parsing of the body allows for both POST requests
-    // and for GET requests, which we don't want. This will be addressed
-    // in the next lecture.
-
-    // Redirect to root URL:
 
     res.redirect('/');
 });
