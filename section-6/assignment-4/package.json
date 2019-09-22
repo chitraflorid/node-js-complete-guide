@@ -14,5 +14,12 @@
     "CSS"
   ],
   "author": "Robert Hieger",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.19.2"
+  },
+  "dependencies": {
+    "ejs": "^2.7.1",
+    "express": "^4.17.1"
+  }
 }
