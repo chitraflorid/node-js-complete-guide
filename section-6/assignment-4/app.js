@@ -46,9 +46,27 @@ app.use( bodyParser.urlencoded( { extended: false } ) );
 
 app.use( express.static( path.join(__dirname, 'public') ) );
 
+// MIDDLEWARE:
+
+// Catchall:
+
+app.use( (request, response, next) =>  {
+
+    // FOR DIAGNOSTIC PURPOSES ONLY:
+
+    console.log('\nServing 404 Page Response...\n');
+
+    response.status(404).render('404', 
+    {
+        pageTitle: 'Page Not Found',
+        path: '/*'
+    });
+
+}); // end app.use()
+
 // Set listening port for Express Server:
 
-app.listen(3000, (request, response, next) => {
+app.listen(3000, () => {
 
     // Log status to console:
 
