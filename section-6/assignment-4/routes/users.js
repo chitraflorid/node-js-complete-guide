@@ -37,13 +37,15 @@ const router = express.Router();
 
 router.get('/', (request, response, next)  =>  {
 
-    // TEMPORARY STATEMENT: TEST ROUTE:
-
     // FOR DIAGNOSTIC PURPOSES ONLY:
 
     console.log('\nSending \'/\' Users Response...\n');
     
-    response.send('<h1>Welcome to the Users Page!</h1>');
+    response.render('users',
+        {
+            pageTitle: 'User List',
+            path: '/'
+        } );
 
 })  // end router.get('/')
 
