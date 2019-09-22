@@ -1,0 +1,18 @@
+{
+  "name": "user-list",
+  "version": "0.0.1",
+  "description": "User List and Username entry screens",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Node.js",
+    "Express",
+    "npm",
+    "EJS",
+    "CSS"
+  ],
+  "author": "Robert Hieger",
+  "license": "ISC"
+}
