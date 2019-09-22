@@ -23,6 +23,8 @@ const path = require('path');
 
 const express = require('express');
 
+const bodyParser = require('body-parser');
+
 // Initialize Express application:
 
 const app = express();
@@ -35,6 +37,14 @@ app.set('view engine', 'ejs');
 
 app.set('views', 'views');  // NOTE: This is by default, so this command is explicit,
                             // not necessary.
+
+// Set up HTTP request body parsing:
+
+app.use( bodyParser.urlencoded( { extended: false } ) );
+
+// Set up static file serviing from public folder:
+
+app.use( express.static( path.join(__dirname, 'public') ) );
 
 // Set listening port for Express Server:
 

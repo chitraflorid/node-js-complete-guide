@@ -1,6 +1,6 @@
 {
   "name": "user-list",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "description": "User List and Username entry screens",
   "main": "app.js",
   "scripts": {
