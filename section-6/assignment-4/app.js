@@ -27,6 +27,15 @@ const express = require('express');
 
 const app = express();
 
+// Set application view engine:
+
+app.set('view engine', 'ejs');
+
+// Set path to view engine templates:
+
+app.set('views', 'views');  // NOTE: This is by default, so this command is explicit,
+                            // not necessary.
+
 // Set listening port for Express Server:
 
 app.listen(3000, (request, response, next) => {
