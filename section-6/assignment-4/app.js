@@ -25,6 +25,10 @@ const express = require('express');
 
 const bodyParser = require('body-parser');
 
+// Import custom modules:
+
+const userRoutes = require('./routes/users');
+
 // Initialize Express application:
 
 const app = express();
@@ -45,6 +49,11 @@ app.use( bodyParser.urlencoded( { extended: false } ) );
 // Set up static file serviing from public folder:
 
 app.use( express.static( path.join(__dirname, 'public') ) );
+
+// CONFIGURE MIDDLEWARE:
+
+app.use(userRoutes);
+
 
 // MIDDLEWARE:
 
