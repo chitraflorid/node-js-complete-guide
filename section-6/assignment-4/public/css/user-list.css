@@ -1,0 +1,55 @@
+/* CSS Styling for User List */
+
+.userComponent  {
+    width: 50%;
+    padding: 35px 25px;
+    border: 2px dotted orangered;
+    border-radius: 12px;
+}
+
+.userComponent__header  {
+    font-weight: 800;
+    font-size: 2.75rem;
+    letter-spacing: 1.25px;
+    color: #a84f17;
+    text-shadow: 2px 2px 3px orangered;
+    border-bottom: 2px groove orangered;
+}
+
+.iconSpace  {
+    padding-left: 15px;
+}
+
+.userList  {
+    margin-top: 25px;
+    margin-left: 25px;
+    margin-bottom: 35px;
+    list-style-image: url('../images/chevron-circle-right-solid.png');
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.userList__item  {
+    margin: 9px 0;
+}
+
+.addUser  {
+    text-decoration: none;
+    border: 3px outset #c0c0c0;
+    border-radius: 12px;
+    background-color: #ffdC9f;
+    color: #a84f17;
+    padding: 6px 12px;
+    font-family: 'Alegreya Sans', Helvetica, sans-serif;
+    font-weight: 700;
+    font-variant: small-caps;
+}
+
+.addUser:hover {
+    border-style: inset;
+    box-shadow: 1.5px 2.5px 2.5px #c0c0c0;
+    color: orangered;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    transition: all 0.5s;
+}

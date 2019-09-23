@@ -2,6 +2,8 @@
 
 <%- include('includes/head.ejs'); %>
 
+    <link rel="stylesheet" href="/css/user-list.css" />
+
     </head>
 
     <body>
@@ -10,17 +12,24 @@
 
         <main>
 
-            <h1>User List</h1>
+            <div class="userComponent">
+
+                <h1 class="userComponent__header">
+                    User List
+                    <span class="iconSpace"><i class="far fa-user"></i></span>
+                </h1>
             
-            <ul>
-                <li>Robert Hieger</li>
-                <li>Alyssa Samuels</li>
-                <li>Brian Nevins</li>
-                <li>Ashley Roberts</li>
-            </ul>
+                <ul class="userList">
+                    <li class="userList__item">Robert Hieger</li>
+                    <li class="userList__item">Alyssa Samuels</li>
+                    <li class="userList__item">Brian Nevins</li>
+                    <li class="userList__item">Ashley Roberts</li>
+                </ul>
 
-            <a href="/admin/add-user/">Add a User</a>
-
-        </main>
+                <a class="addUser" href="/admin/add-user/">add a user</a>        
+            
+            </div>
+            
+            </main>
         
     <%- include('includes/end.ejs'); %>
