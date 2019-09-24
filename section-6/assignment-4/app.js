@@ -29,6 +29,8 @@ const bodyParser = require('body-parser');
 
 const userRoutes = require('./routes/users');
 
+const adminRoutes = require('./routes/add-users');
+
 // Initialize Express application:
 
 const app = express();
@@ -54,6 +56,7 @@ app.use( express.static( path.join(__dirname, 'public') ) );
 
 app.use(userRoutes);
 
+app.use(adminRoutes);
 
 // MIDDLEWARE:
 
