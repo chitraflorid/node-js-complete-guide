@@ -39,21 +39,26 @@
 
 .addUser  {
     text-decoration: none;
+    width: 150px;
     border: 3px outset #c0c0c0;
     border-radius: 12px;
-    background-color: #ffdC9f;
-    color: #a84f17;
-    padding: 6px 12px;
+    padding: 3px 12px;
+    background-color: lightsalmon;
+    color: white;
     font-family: 'Alegreya Sans', Helvetica, sans-serif;
-    font-weight: 700;
+    font-weight: 800;
+    font-size: 20px;
     font-variant: small-caps;
+    letter-spacing: 1.5px;
+    cursor: pointer;
 }
 
-.addUser:hover {
-    border-style: inset;
-    box-shadow: 1.5px 2.5px 2.5px #c0c0c0;
+.addUser:hover  {
+    background-color: white;
     color: orangered;
-    font-weight: 800;
-    letter-spacing: 1.5px;
-    transition: all 0.5s;
+    border-style: inset;
+    font-weight: 900;
+    font-size: 23px;
+    box-shadow: 3.5px 2.5px 3px #c0c0c0;
+    transition: all 0.75s ease-in-out;
 }
