@@ -1,0 +1,17 @@
+{
+  "name": "user-list",
+  "version": "1.0.0",
+  "description": "A simple application that lists and allows addition of users.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "HTML5",
+    "CSS3",
+    "Node.js",
+    "Express.js"
+  ],
+  "author": "Robert Hieger",
+  "license": "ISC"
+}
