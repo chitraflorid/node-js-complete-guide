@@ -68,6 +68,19 @@ app.get('/', (request, response, next) =>  {
 
 });
 
+app.get('/users', (request, response, next) =>  {
+
+    response.render('users.ejs',
+    
+        {
+            docTitle: 'User List',
+            path: '/users'
+        }
+    
+    );
+
+}); // end app.get('/users')
+
 // Catchall Middleware:
 
 app.use( (request, response, next)  => {
