@@ -1,47 +1,20 @@
 <%# Add User EJS Template %>
 
-<!DOCTYPE html>
+        <%- include('includes/head.ejs'); %>
 
-<html lang="en">
-
-    <head>
-
-        <meta charset="UTF-8" />
-
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-
-        <title><%= docTitle %></title>
-
-        <link rel="stylesheet" href="/css/main.css" />
-
-        <link rel="stylesheet" href="/css/header.css" />
+        <link rel="stylesheet" href="/css/add-user-form.css">
 
     </head>
 
     <body>
 
-        <header class="mainHead">
-
-            <nav class="mainHead__nav">
-                <ul class="mainHead__navList">
-                    <li class="mainHead__navListItem">
-                        <a class="mainHead__navLink" href="/">Add User</a>
-                    </li>
-                    <li class="mainHead__navListItem">
-                        <a class="mainHead__navLink" href="/users">User List</a>
-                    </li>
-                </ul>
-            </nav>
-
-        </header>
+        <%- include('includes/navigation.ejs'); %>
 
         <main>
 
-            <form action="/admin/add-user" method="POST">
+            <form class="addUser" action="/admin/add-user" method="POST">
             
-                <h1><i class="far fa-user"></i> Add a User</h1>
+                <h1 class="addUser__head"><span class="iconSpace"><i class="far fa-user"></i></span> Add a User</h1>
 
                 <div class="control-group">
                     <label for="fullName">Full Name</label>
@@ -52,10 +25,8 @@
                     <button type="submit">Add User</button>
                 </div>
             
-            </form>
+            </form> <!-- END form -->
             
-        </main>
-        
-    </body>
+        </main>     <!-- END main -->
 
-</html>
+    <%- include('includes/end.ejs'); %>

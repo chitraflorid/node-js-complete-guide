@@ -1,0 +1,82 @@
+/* CSS Styling for Add User Form */
+
+.addUser  {
+    margin-top: 35px;
+    width: 50%;
+    height: 300px;
+    /*background-color: #ffdc9f;*/
+    background-color: rgba(255, 220, 159, 0.35);
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 2.5px 3.5px 3px #ffdc9f;
+}
+
+.addUser__head  {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: orangered;
+    text-shadow: 2px 2px 3px #c0c0c0;
+    letter-spacing: 1.25px;
+    border-bottom: 2px groove orangered;
+    padding-bottom: 3px;
+    margin-bottom: 25px;
+}
+
+.iconSpace  {
+    padding-left: 0;
+    padding-right: 15px;
+}
+
+.control-group  {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+}
+
+.control-group label  {
+    font-family: 'Alegreya Sans', Helvetica, sans-serif;
+    font-weight: 800;
+    font-size: 22px;
+    letter-spacing: 1px;
+    color: orangered;
+    margin-bottom: 6px;
+}
+
+.control-group [type="text"]  {
+    width: 75%;
+    height: 30px;
+    border: 3px inset #c0c0c0;
+    border-radius: 12px;
+    outline: none;
+    padding: 0 12px;
+    margin-bottom: 25px;
+    background-color: wheat;
+    font-family: 'Cormorant Garamond', 'Palatino', serif;
+    font-weight: 700;
+    font-size: 20px;
+ }
+
+ .control-group button  {
+    width: 150px;
+    border: 3px outset #c0c0c0;
+    border-radius: 12px;
+    padding: 3px 12px;
+    background-color: lightsalmon;
+    color: white;
+    font-family: 'Alegreya Sans', Helvetica, sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    font-variant: small-caps;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+ }
+
+ .control-group button:hover  {
+    background-color: white;
+    color: orangered;
+    border-style: inset;
+    font-weight: 900;
+    font-size: 23px;
+    box-shadow: 3.5px 2.5px 3px #c0c0c0;
+    transition: all 0.75s ease-in-out;
+ }
