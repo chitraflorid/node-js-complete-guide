@@ -41,7 +41,34 @@ app.use( bodyParser.urlencoded( {extended: false} ) );
 
 app.use( express.static( path.join(__dirname, 'public') ) );
 
-// CATCHALL MIDDLEWARE:
+// CONFIGURE LISTENING PORT AND INITIALIZE HTTP SERVER:
+
+app.listen(3000, () => {
+
+    console.log('\nServer Listening on Port 3000...\n');
+
+});
+
+// MIDDLEWARE:
+
+app.get('/', (request, response, next) =>  {
+
+    // Log to console route taken:
+
+    console.log('\nSent Add User Response...\n');
+
+    response.render('add-user',
+      
+        {
+            docTitle: 'Add User',
+            path: '/'
+        }
+    
+    );
+
+});
+
+// Catchall Middleware:
 
 app.use( (request, response, next)  => {
 
@@ -50,18 +77,9 @@ app.use( (request, response, next)  => {
     response.status(404).render('404',
 
         {
-            docTitle: 'Page Not Found',
-            path: '/'
+            docTitle: 'Page Not Found'
         }
     
     );
-
-});
-
-// CONFIGURE LISTENING PORT AND INITIALIZE HTTP SERVER:
-
-app.listen(3000, () => {
-
-    console.log('\nServer Listening on Port 3000...\n');
 
 });
