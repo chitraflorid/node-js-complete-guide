@@ -31,11 +31,13 @@ main {
 
 .error {
     color: #ff0000;
+    font-size: 2rem;
     font-variant: small-caps;
 }
 
 .error404 {
-    font-weight: 500;
+    font-weight: 700;
     font-size: 1.75rem;
+    font-variant: small-caps;
 }
 
