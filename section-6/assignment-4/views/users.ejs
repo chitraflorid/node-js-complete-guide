@@ -1,57 +1,39 @@
 <%# User List EJS Template %>
 
-<!DOCTYPE html>
+<%- include('includes/head.ejs'); %>
 
-<html lang="en">
+        <link rel="stylesheet" href="/css/user-list.css">
 
-    <head>
+        <!-- FontAwesome for Icons -->
 
-        <meta charset="UTF-8" />
-
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-
-        <title><%= docTitle %></title>
-
-        <link rel="stylesheet" href="/css/main.css" />
-
-        <link rel="stylesheet" href="/css/header.css" />
+        <script src="https://kit.fontawesome.com/9d5c1d7424.js" crossorigin="anonymous"></script>
 
     </head>
 
     <body>
 
-        <header class="mainHead">
-
-            <nav class="mainHead__nav">
-                <ul class="mainHead__navList">
-                    <li class="mainHead__navListItem">
-                        <a class="mainHead__navLink" href="/">Add User</a>
-                    </li>
-                    <li class="mainHead__navListItem">
-                        <a class="mainHead__navLink" href="/users">User List</a>
-                    </li>
-                </ul>
-            </nav>
-
-        </header>
+        <%- include('includes/navigation.ejs'); %>
 
         <main>
 
-            <h1>User List</h1>
-            
-            <ul>
-                <li>Robert Hieger</li>
-                <li>Alyssa Samuels</li>
-                <li>Brian Nevins</li>
-                <li>Ashley Roberts</li>
-            </ul>
+            <div class="userComponent">
 
-            <a href="/admin/add-user/">Add a User</a>
+                <h1 class="userComponent__header">
+                    User List
+                    <span class="iconSpace"><i class="far fa-user"></i></span>
+                </h1>
+                
+                <ul class="userList">
+                    <li class="userList__item">Robert Hieger</li>
+                    <li class="userList__item">Alyssa Samuels</li>
+                    <li class="userList__item">Brian Nevins</li>
+                    <li class="userList__item">Ashley Roberts</li>
+                </ul>
 
-        </main>
+                <a class="addUser" href="/">add a user</a>
+
+            </div>  <!-- END userComponent -->
+
+        </main>     <!-- END main -->
         
-    </body>
-
-</html>
+    <%- include('includes/end.ejs'); %>

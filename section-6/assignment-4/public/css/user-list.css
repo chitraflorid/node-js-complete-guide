@@ -2,6 +2,7 @@
 
 .userComponent  {
     width: 50%;
+    min-height: 300px;
     padding: 35px 25px;
     border: 2px dotted orangered;
     border-radius: 12px;
@@ -17,7 +18,7 @@
     letter-spacing: 1.25px;
     border-bottom: 2px groove orangered;
     padding-bottom: 3px;
-    margin-bottom: 25px;
+    margin-bottom: 50px;
 }
 
 .iconSpace  {
