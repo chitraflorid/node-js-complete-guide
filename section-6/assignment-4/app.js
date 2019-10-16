@@ -65,7 +65,8 @@ app.get('/', (request, response, next) =>  {
       
         {
             docTitle: 'Add User',
-            path: '/'
+            path: '/',
+            ActiveInput: true
         }
     
     );
@@ -87,7 +88,8 @@ app.get('/users', (request, response, next) =>  {
         {
             users: userNames,
             docTitle: 'User List',
-            path: '/users'
+            path: '/users',
+            activeList: true
         }
 
     );
