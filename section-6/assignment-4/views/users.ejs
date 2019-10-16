@@ -22,13 +22,20 @@
                     User List
                     <span class="iconSpace"><i class="far fa-user"></i></span>
                 </h1>
+
+                <% if (users.length > 0) { %>
                 
-                <ul class="userList">
-                    <li class="userList__item">Robert Hieger</li>
-                    <li class="userList__item">Alyssa Samuels</li>
-                    <li class="userList__item">Brian Nevins</li>
-                    <li class="userList__item">Ashley Roberts</li>
-                </ul>
+                    <ul class="userList">
+                        <% for (let user of users) { %>
+                            <li class="userList__item"><%= user.name %></li>
+                        <% } %>
+                    </ul>
+
+                <% } else { %>
+
+                    <h1>No Users Found!</h1>
+
+                <% } %>
 
                 <a class="addUser" href="/">add a user</a>
 

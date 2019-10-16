@@ -41,6 +41,10 @@ app.use( bodyParser.urlencoded( {extended: false} ) );
 
 app.use( express.static( path.join(__dirname, 'public') ) );
 
+// SET UP MOCK DATA STORE FOR USERS:
+
+const users = [];
+
 // CONFIGURE LISTENING PORT AND INITIALIZE HTTP SERVER:
 
 app.listen(3000, () => {
@@ -70,22 +74,49 @@ app.get('/', (request, response, next) =>  {
 
 app.get('/users', (request, response, next) =>  {
 
+    // Log to console route taken:
+
+    console.log('\nSent User List Response...\n');
+
+    // Define data store for User Names:
+
+    const userNames = users;
+
     response.render('users.ejs',
-    
+
         {
+            users: userNames,
             docTitle: 'User List',
             path: '/users'
         }
-    
+
     );
 
 }); // end app.get('/users')
+
+app.post('/', (request, response, next) => {
+
+    // FOR DIAGNOSTIC PURPOSES ONLY:
+
+    console.log(users);
+
+    // Push new user name element onto users[]:
+
+    users.push( {name: request.body.fullName} );
+
+    console.log(users);
+
+    // Redirect to users page:
+
+    response.redirect('/users');
+
+});
 
 // Catchall Middleware:
 
 app.use( (request, response, next)  => {
 
-    console.log('\nSent 404 response...\n');
+    console.log('\nSent 404 Response...\n');
     
     response.status(404).render('404',
 
