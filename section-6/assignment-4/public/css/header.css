@@ -36,22 +36,15 @@
 
 .mainHead__navLink:hover {
     font-weight: 800;
-    text-decoration: underline;
     background-color: snow;
     border-radius: 15px;
     transition: all 1s;
 }
 
-.selected {
+.active {
     font-weight: 900;
     letter-spacing: 1.5px;
     background-color: snow;
     border-radius: 15px;
-    padding-top: -2.5rem;
     color: #a84f17;
-}
-
-.active {
-    font-weight: 800;
-    background-color: snow;
 }

@@ -4,7 +4,7 @@
  * app.js                                                        *
  *                                                               *
  * Robert Hieger                                                 *
- * October 13, 2019                                              *
+ * October 18, 2019                                              *
  *                                                               *
  * This module is the entry point to the application and will    *
  * import all needed native, third party, and custom modules     *
@@ -51,7 +51,7 @@ app.listen(3000, () => {
 
     console.log('\nServer Listening on Port 3000...\n');
 
-});
+}); // end app.listen(3000)
 
 // MIDDLEWARE:
 
@@ -65,13 +65,12 @@ app.get('/', (request, response, next) =>  {
       
         {
             docTitle: 'Add User',
-            path: '/',
-            ActiveInput: true
+            path: '/'
         }
     
-    );
+    );  // emd response.render('add-user')
 
-});
+}); // end app.get('/')
 
 app.get('/users', (request, response, next) =>  {
 
@@ -83,16 +82,15 @@ app.get('/users', (request, response, next) =>  {
 
     const userNames = users;
 
-    response.render('users.ejs',
+    response.render('users',
 
         {
             users: userNames,
             docTitle: 'User List',
-            path: '/users',
-            activeList: true
+            path: '/users'
         }
 
-    );
+    );  // end response.render('users')
 
 }); // end app.get('/users')
 
@@ -123,7 +121,8 @@ app.use( (request, response, next)  => {
     response.status(404).render('404',
 
         {
-            docTitle: 'Page Not Found'
+            docTitle: 'Page Not Found',
+            path: '/*'
         }
     
     );

@@ -5,10 +5,10 @@
             <nav class="mainHead__nav">
                 <ul class="mainHead__navList">
                     <li class="mainHead__navListItem">
-                        <a class="mainHead__navLink" href="/">Add User</a>
+                        <a class="mainHead__navLink <%= path === '/' ? 'active' : '' %>" href="/">Add User</a>
                     </li>
                     <li class="mainHead__navListItem">
-                        <a class="mainHead__navLink" href="/users">User List</a>
+                        <a class="mainHead__navLink <%= path === '/users' ? 'active' : '' %>" href="/users">User List</a>
                     </li>
                 </ul>
             </nav>      <!-- END nav -->
