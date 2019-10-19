@@ -20,19 +20,19 @@ app.set('views', 'views');  // NOTE: This is default in Express; included for co
 
 app.get('/', (req, res, next)  =>  {
 
-    res.render(path);
+    res.render('index', {pageTitle: 'Add User'});
 
 }); // end app.get('/')
 
 app.get('/users', (req, res, next)  =>  {
 
-    res.render(path);
+    res.render('users', {pageTitle: 'User List'});
 
 }); // end app.get('/users')
 
-app.post('/add-user', (req, res, next)  =>  {
+app.post('/add-user', (req, res, next) =>  {
 
-     res.redirect('/users');
+    res.redirect('/users');
 
 }); // end app.post('/add-user')
 
