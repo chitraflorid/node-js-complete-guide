@@ -22,14 +22,18 @@ const users = [];
 
 //2. express-handlebars
 
-app.engine('hbs', expressHbs(
+/*app.engine('hbs', expressHbs(
     {
         defaultLayout: 'main-layout',
         extname: 'hbs'
     } )
-);
+);*/
 
-app.set('view engine', 'hbs');
+//app.set('view engine', 'hbs');
+
+//3. EJS
+
+app.set('view engine', 'ejs');
 
 // Configure Folder for Templates:
 
