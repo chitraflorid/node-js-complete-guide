@@ -6,6 +6,16 @@ const express = require('express');
 
 const app =  express();
 
+// Configure Templating Engine:
+
+//1. Pug Configuration
+
+app.set('view engine', 'pug');
+
+// Configure Folder for Templates:
+
+app.set('views', 'views');  // NOTE: This is default in Express; included for completeness
+
 // ROUTES:
 
 app.get('/', (req, res, next)  =>  {
