@@ -22,7 +22,14 @@ const users = [];
 
 //2. express-handlebars
 
-app.engine('hbs', expressHbs() );
+app.engine('hbs', expressHbs(
+    {
+        defaultLayout: 'main-layout',
+        extname: 'hbs'
+    } )
+);
+
+app.set('view engine', 'hbs');
 
 // Configure Folder for Templates:
 
@@ -45,7 +52,8 @@ app.get('/users', (req, res, next)  =>  {
     res.render('users',
         {
             pageTitle: 'User List',
-            users: users
+            users: users,
+            hasUsers: users.length > 0
         }
     );
 
