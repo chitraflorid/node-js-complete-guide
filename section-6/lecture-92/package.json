@@ -1,0 +1,20 @@
+{
+  "name": "assignment4-solution",
+  "version": "1.0.0",
+  "description": "Maximillian Schwarzmüller's Solution to Assignment 4",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Node.js",
+    "HTML5",
+    "JavaScript",
+    "Express.js",
+    "Pug",
+    "Express-Handlebars",
+    "EJS"
+  ],
+  "author": "Maximillian Schwarzmüller, Robert Hieger",
+  "license": "ISC"
+}
