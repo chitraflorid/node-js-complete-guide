@@ -4,6 +4,8 @@ const express = require('express');
 
 const bodyParser = require('body-parser');  // Parses incoming HTTP POST responses
 
+const expressHbs = require('express-handlebars');
+
 // Initialize express:
 
 const app =  express();
@@ -16,7 +18,11 @@ const users = [];
 
 //1. Pug Configuration
 
-app.set('view engine', 'pug');
+// app.set('view engine', 'pug');
+
+//2. express-handlebars
+
+app.engine('hbs', expressHbs() );
 
 // Configure Folder for Templates:
 
