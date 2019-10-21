@@ -24,44 +24,18 @@ const express = require('express');
 
 // Import custom module:
 
-const rootDir = require('../util/path');
+const productsController = require('../controllers/products');
 
 // Initialize Router service:
 
 const router = express.Router();
 
-// Initialize a constant to act as a mock database for products:
-
-const products = [];
-
 // ROUTES:
 
-router.get('/add-product', (req, res, next) => {
+router.get('/add-product', productsController.getAddProduct);
 
-    // Send response:
-
-    res.render('add-product',
-        {
-            pageTitle: 'Add Product',
-            path: '/admin/add-product',
-            formsCSS: true,
-            productCSS: true,
-            activeAddProduct: true
-        } );
-
-}); // end router.use()
-
-router.post('/add-product', (req, res, next) => {
-
-    // Push new element onto products array:
-
-    products.push( { title: req.body.title } );
-
-    res.redirect('/');
-});
+router.post('/add-product', productsController.postAddProduct);
 
 // Export router for use in other modules:
 
-exports.routes = router;
-
-exports.products = products;
+module.exports = router;

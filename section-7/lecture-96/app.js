@@ -27,7 +27,7 @@ const bodyParser = require('body-parser');
 
 // Import custom modules:
 
-const adminData = require('./routes/admin');
+const adminRoutes = require('./routes/admin');
 
 const shopRoutes = require('./routes/shop');
 
@@ -59,7 +59,7 @@ app.use( express.static( path.join(__dirname, 'public') ) );
 
 // Configure middleware:
 
-app.use('/admin', adminData.routes);
+app.use('/admin', adminRoutes);
 
 // NOTE: Above, app.use is refactored by adding the URL 'filter' of '/admin'.
 // Therefore, any requests that fall within adminRoutes will automatically

@@ -21,13 +21,9 @@ const path = require('path');
 
 const express = require('express');
 
-// Import required custom module:
+// Import custom modules:
 
-const rootDir = require('../util/path');
-
-// Import mock database contained in products array:
-
-const adminData = require('./admin');
+const productsController = require('../controllers/products');
 
 // Initialize Router service:
 
@@ -35,24 +31,7 @@ const router = express.Router();
 
 // ROUTES:
 
-router.get('/', (req, res, next) => {
-
-    // Declare data source for products:
-
-    const products = adminData.products;
-
-    // Send response:
-
-    res.render( 'shop',
-        { prods: products,
-          pageTitle: 'Shop', path: '/',
-          hasProducts: products.length > 0,
-          activeShop: true,
-          productCSS: true
-        } );
-
-    
-}); // end router.get()
+router.get('/', productsController.getProducts);
 
 // Export router:
 
