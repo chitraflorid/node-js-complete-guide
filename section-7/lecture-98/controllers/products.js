@@ -13,9 +13,9 @@
  ***************************************************************
 */
 
-// Declare empty array to hold products data--mock database:
+// Import required custom modules:
 
-const products = [];
+const Product = require('../models/product');
 
 // Add Product Route:
 
@@ -41,9 +41,13 @@ exports.getAddProduct = (req, res, next) => {
 
 exports.postAddProduct = (req, res, next) => {
 
-    // Push new element onto products array:
+    // Instantiate object of type Product:
 
-    products.push( { title: req.body.title } );
+    const product = new Product(req.body.title);
+
+    // Save new product to products array:
+
+    product.save();
 
     // Redirect to Landing Page.
     
@@ -54,6 +58,10 @@ exports.postAddProduct = (req, res, next) => {
 // Logic to get products for display in view:
 
 exports.getProducts = (req, res, next) => {
+
+    // Get all products for rendering:
+
+    const products = Product.fetchAll();
 
     // Send response:
 

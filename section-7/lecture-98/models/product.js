@@ -40,7 +40,7 @@ module.exports = class Product {
 
         // Return complete array of products data:
 
-        return this.products;
+        return products;
 
     }   // end fetchAll()
 
