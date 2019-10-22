@@ -4,7 +4,7 @@
  * products.js                                                 *
  *                                                             *
  * Robert Hieger                                               *
- * October 20, 2019                                            *
+ * October 21, 2019                                            *
  *                                                             *
  * This module contains controllers with product-related       *
  * logic, including listing or adding products to the          *

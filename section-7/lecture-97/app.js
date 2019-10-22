@@ -31,6 +31,8 @@ const adminRoutes = require('./routes/admin');
 
 const shopRoutes = require('./routes/shop');
 
+const errorController = require('./controllers/error');
+
 
 // Initialize Express app:
 
@@ -69,15 +71,7 @@ app.use(shopRoutes);
 
 // Catchall Middleware:
 
-app.use( (req, res, next) => {
-
-    res.status(404).render('404',
-        {
-            pageTitle: 'Page Not Found',
-            path: '/*'
-        } );
-
-}); // end app.use() catchall
+app.use(errorController.get404); // end app.use() catchall
 
 // NOTE: This middleware omits a path as the default IS '/' and
 // that should allow anything that comes after the site root.
