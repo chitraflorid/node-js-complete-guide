@@ -68,7 +68,7 @@ module.exports = class Product {
  
     }   // end save()
  
-    static fetchAll()  {
+    static fetchAll(callBack)  {
 
         const p = path.join(
 
@@ -86,13 +86,13 @@ module.exports = class Product {
 
                 // Return empty array:
 
-                return [];
+                callBack([]);
 
             }   // end if
 
             // Return array of products data:
 
-            return JSON.parse(fileContent);
+            callBack(JSON.parse(fileContent));
 
         });
  

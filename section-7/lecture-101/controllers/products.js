@@ -4,7 +4,7 @@
  * products.js                                                 *
  *                                                             *
  * Robert Hieger                                               *
- * October 25, 2019                                            *
+ * October 26, 2019                                            *
  *                                                             *
  * This module contains controllers with product-related       *
  * logic, including listing or adding products to the          *
@@ -61,11 +61,11 @@ exports.getProducts = (req, res, next) => {
 
     // Get all products for rendering:
 
-    const products = Product.fetchAll();
+    Product.fetchAll( (products) =>  {
 
-    // Send response:
+        // Send response:
 
-    res.render( 'shop',
+        res.render( 'shop',
 
         {
             prods: products,
@@ -75,5 +75,7 @@ exports.getProducts = (req, res, next) => {
             productCSS: true
 
         }); // end res.render('shop')
+
+    }); // end products()    
   
 };  // end exports.getProducts()
