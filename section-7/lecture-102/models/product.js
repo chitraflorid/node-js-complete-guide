@@ -17,6 +17,38 @@
 const fs = require('fs');
  
 const path = require('path');
+
+const p = path.join(
+
+    path.dirname(process.mainModule.filename),
+    'data',
+    'products.json'
+
+);  // end const p
+
+// Helper Function:
+
+const getProductsFromFile = callBack =>  {
+
+    // Read in data file:
+
+    fs.readFile( p, (err, fileContent) => {
+
+        if (err)  {
+
+            // Return empty array:
+
+            return callBack([]);
+
+        }   // end if
+
+        // Return array of products data:
+
+        callBack(JSON.parse(fileContent));
+
+    }); // end fs.readFile(p)
+
+};  // end getProductsFromFile()
  
 // Declare Product class:
  
@@ -32,25 +64,7 @@ module.exports = class Product {
  
     save()  {
  
-        const p = path.join(
-
-            path.dirname(process.mainModule.filename),
-            'data',
-            'products.json'
-
-        );  // end const p
-
-        fs.readFile(p, (err, fileContent) => {
-
-            // Declare variable to hold product data:
-
-            let products = [];
-            
-            if (!err)  {
-
-                products = JSON.parse(fileContent);
-
-            }   // end if
+        getProductsFromFile( products =>  {
 
             // Push new product onto products array:
 
@@ -64,38 +78,22 @@ module.exports = class Product {
 
             });
 
+        });
+
+        fs.readFile(p, (err, fileContent) => {
+
+            // Declare variable to hold product data:
+
+            let products = [];
+
         }); // end fs.readFile(p)
  
     }   // end save()
  
     static fetchAll(callBack)  {
 
-        const p = path.join(
-
-            path.dirname(process.mainModule.filename),
-            'data',
-            'products.json'
-
-        );  // end const p
-
-        // Read in data file:
-
-        fs.readFile( p, (err, fileContent) => {
-
-            if (err)  {
-
-                // Return empty array:
-
-                callBack([]);
-
-            }   // end if
-
-            // Return array of products data:
-
-            callBack(JSON.parse(fileContent));
-
-        });
- 
+        getProductsFromFile(callBack);
+                            
     }   // end fetchAll()
  
 };  // end Product()
