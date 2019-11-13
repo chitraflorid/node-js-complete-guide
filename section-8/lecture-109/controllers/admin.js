@@ -4,7 +4,7 @@
  * admin.js                                                    *
  *                                                             *
  * Robert Hieger                                               *
- * November 11, 2019                                           *
+ * November 12, 2019                                           *
  *                                                             *
  * This module contains controllers that embody the logic      *
  * necessary for maintaining the product base.                 *
@@ -38,9 +38,21 @@ exports.getAddProduct = (req, res, next) => {
 
 exports.postAddProduct = (req, res, next) => {
 
+    // Elements to be saved to product:
+
+    this.title = req.body.title;
+    this.imageUrl = req.body.imageUrl;
+    this.description = req.body.description;
+    this.price = req.body.price;
+
     // Instantiate object of type Product:
 
-    const product = new Product(req.body.title);
+    const product = new Product(
+      title,
+      imageUrl,
+      description,
+      price
+    );
 
     // Save new product to products array:
 

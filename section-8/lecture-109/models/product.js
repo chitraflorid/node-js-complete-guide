@@ -4,7 +4,7 @@
  * product.js                                                  *
  *                                                             *
  * Robert Hieger                                               *
- * November 11, 2019                                           *
+ * November 12, 2019                                           *
  *                                                             *
  * This module contains a model for the data structure of a    *
  * product that will be rendered on the Shop page.             *
@@ -54,9 +54,17 @@ const getProductsFromFile = callBack =>  {
  
 module.exports = class Product {
  
-    constructor(t)  {
+    constructor(
+        title,
+        imageUrl,
+        description,
+        price
+    )  {
  
-        this.title = t;
+        this.title = title;
+        this.imageUrl = imageUrl;
+        this.description = description;
+        this.price = price;
  
     }   // end constructor(title)
  
