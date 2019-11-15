@@ -40,10 +40,10 @@ exports.postAddProduct = (req, res, next) => {
 
     // Elements to be saved to product:
 
-    this.title = req.body.title;
-    this.imageUrl = req.body.imageUrl;
-    this.description = req.body.description;
-    this.price = req.body.price;
+    const title = req.body.title;
+    const imageUrl = req.body.imageUrl;
+    const description = req.body.description;
+    const price = req.body.price;
 
     // Instantiate object of type Product:
 
