@@ -1,0 +1,25 @@
+{
+  "name": "lecture-111",
+  "version": "1.4.0",
+  "description": "Editing and Deleting Products",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js",
+    "start-server": "node app.js"
+  },
+  "keywords": [
+    "Node.js",
+    "Express.js",
+    "HTML"
+  ],
+  "author": "Robert Hieger",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.0.2",
+    "pug": "^2.0.4"
+  }
+}
