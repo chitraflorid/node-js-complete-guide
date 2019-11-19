@@ -71,6 +71,10 @@ module.exports = class Product {
     // METHODS:
  
     save()  {
+
+        // Unique ID for product:
+
+        this.id = Math.random().toString();
  
         getProductsFromFile( products =>  {
 
