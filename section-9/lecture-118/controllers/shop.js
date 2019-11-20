@@ -46,7 +46,7 @@ exports.getProduct = (req, res, next) =>  {
 
     const prodId = req.params.productId;
 
-    console.table(prodId);
+    console.log(prodId);
 
     // TEMPORARY:
 
