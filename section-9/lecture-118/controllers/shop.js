@@ -40,6 +40,20 @@ exports.getProducts = (req, res, next) => {
   
 };  // end exports.getProducts()
 
+exports.getProduct = (req, res, next) =>  {
+
+    // Get value of productId:
+
+    const prodId = req.params.productId;
+
+    console.table(prodId);
+
+    // TEMPORARY:
+
+    res.redirect('/');
+
+};  // end exports.getProduct()
+
 exports.getIndex = (req, res, next)  =>  {
 
         // Get all products for rendering:
