@@ -46,7 +46,13 @@ exports.getProduct = (req, res, next) =>  {
 
     const prodId = req.params.productId;
 
-    console.log(prodId);
+    // TEMPORARY
+    
+    Product.findById(prodId, product => {
+
+        console.log(product);
+
+    }); // end product.findById()
 
     // TEMPORARY:
 
