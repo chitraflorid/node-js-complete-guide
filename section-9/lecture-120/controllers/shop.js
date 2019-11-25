@@ -52,12 +52,22 @@ exports.getProduct = (req, res, next) =>  {
 
         console.log(product);
 
+        // Render Detail View:
+
+        res.render('shop/product-detail',
+        {
+            product: product,
+            pageTitle: product.title,
+            path: '/products'
+        });
+
+
     }); // end product.findById()
 
     // TEMPORARY:
 
-    res.redirect('/');
-
+    // res.redirect('/');
+    
 };  // end exports.getProduct()
 
 exports.getIndex = (req, res, next)  =>  {
