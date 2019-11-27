@@ -102,6 +102,21 @@ exports.getCart = (req, res, next) =>  {
 
 };  // end exports.getCart()
 
+exports.postCart = (req, res, next) => {
+
+    // Store product ID:
+
+    const prodId = req.body.productId;
+
+    // TEMPORARY:
+
+    console.log('Product ID#: ', prodId);
+
+     res.redirect('/cart');
+
+
+};
+
 exports.getOrders = (req, res, next) =>  {
 
     res.render('shop/orders', {
