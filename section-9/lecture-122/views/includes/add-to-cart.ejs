@@ -1,0 +1,13 @@
+<%# Add to Cart include template %>
+
+<form action="/cart" method="POST">
+
+    <button class="btn" type="submt">
+        Add to Cart
+    </button>
+
+    <%# Hidden input for product ID number %>
+
+    <input type="hidden" name="productId" value="<%= product.id %>" />
+
+</form>
