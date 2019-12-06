@@ -4,7 +4,7 @@
  * shop.js                                                     *
  *                                                             *
  * Robert Hieger                                               *
- * December 6, 2019                                            *
+ * December 11, 2019                                           *
  *                                                             *
  * This module contains controllers with product-related       *
  * logic, including listing or adding products to the          *

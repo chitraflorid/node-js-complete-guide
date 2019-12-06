@@ -4,7 +4,7 @@
  * product.js                                                  *
  *                                                             *
  * Robert Hieger                                               *
- * December 6, 2019                                            *
+ * December 11, 2019                                           *
  *                                                             *
  * This module contains a model for the data structure of a    *
  * product that will be rendered on the Shop page.             *

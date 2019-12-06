@@ -4,7 +4,7 @@
  * error.js                                                    *
  *                                                             *
  * Robert Hieger                                               *
- * December 6, 2019                                            *
+ * December 11, 2019                                           *
  *                                                             *
  * This module contains the controller to present a 404        *
  * page error.                                                 *

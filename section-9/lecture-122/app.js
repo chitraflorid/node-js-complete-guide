@@ -6,7 +6,7 @@
  * app.js                                                      *
  *                                                             *
  * Robert Hieger                                               *
- * December 6, 2019                                            *
+ * December 11, 2019                                           *
  *                                                             *
  * In this lecture, a model for the shopping cart is           *
  * introduced to the structure of the application.             *

@@ -4,7 +4,7 @@
  * admin.js                                                    *
  *                                                             *
  * Robert Hieger                                               *
- * December 6, 2019                                            *
+ * December 11, 2019                                           *
  *                                                             *
  * This module contains the routing logic for the Admin page   *
  * that allows addition of products to the online store in     *
