@@ -18,6 +18,12 @@
  ***************************************************************
 */
 
+// Import necessary core modules:
+
+const fs = require('fs');
+
+const path = require('path');
+
 // DECLARE Cart CLASS:
 
 modules.export = class Cart {
