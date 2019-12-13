@@ -24,6 +24,16 @@ const fs = require('fs');
 
 const path = require('path');
 
+// Configure path to cart:
+
+const p = path.join(
+
+    path.dirname(process.mainModule.filename),
+    'data',
+    'cart.json'
+
+);  // end const p
+
 // DECLARE Cart CLASS:
 
 modules.export = class Cart {
@@ -49,14 +59,80 @@ modules.export = class Cart {
 
     // METHODS:
 
-    static addProduct(id)  {
+    static addProduct(id, productPrice)  {
 
         // Fetch the previous cart from cart.json file.
 
-        // Analyze cart => is added product in existing cart?
+        // Declare empty cart object:
 
-        // New product ? addProduct : increment quantity of existing product
+        let cart = { products: [], totalPrice: 0 };
 
+        fs.readFile(p, (err, fileContent) =>  {
+
+            if (!err)  {
+
+                // If no err, set cart equal to parsed fileContent:
+
+                cart = JSON.parse(fileContent);
+
+            }   // end if
+
+            // Analyze cart => find existing product index:
+
+            const existingProductIndex = cart.products.findIndex(prod => prod.id === id);
+
+            // Store value of existingProductIndex:
+
+            const existingProudct = cart.products[existingProductIndex];
+
+            // Declare updatedProduct:
+
+            let updatedProduct;
+
+        // addProduct / increment quantity
+
+        if (existingProduct)  {
+
+                // Set value for updatedProduct:
+
+                updatedProduct = {...existingProduct};
+
+                // Increment qty on updatedProduct:
+
+                updatedProduct.qty += 1;
+
+                cart.products = [...cart.products];
+
+                // Update products in cart:
+
+                cart.products[existingProductIndex] = updatedProduct;
+
+            }   else  {
+
+                // if no existingProduct:
+
+                updatedProduct = { id: id, qty: 1 };
+
+                // Update products in cart:
+
+                cart.products = [...cart.products, updatedProduct];
+
+            }   // end if-else
+
+            // Update total for cart:
+
+            cart.totalPrice = cart.totalPrice + productPrice;
+
+            // Write cart data to cart.json data store:
+
+            fs.write(p, JSON.stringify(cart), (err) =>  {
+
+                console.log(err);
+
+            }); // end fs.write()
+
+        }); // end fs.readFile()
+ 
     }   // end addProduct()
 
 };   // end Cart()
